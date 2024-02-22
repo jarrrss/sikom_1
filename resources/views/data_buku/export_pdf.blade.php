@@ -20,7 +20,7 @@
 		}
 	</style>
 	<center>
-		<h4>DATA BARANG</h4>
+		<h4>DATA BUKU</h4>
 		<p>Waktu Export : {{date('d-m-Y H:i')}}</p>
 	</center>
 

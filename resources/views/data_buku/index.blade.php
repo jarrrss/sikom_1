@@ -23,9 +23,15 @@
                         <div class="d-flex my-auto btn-list justify-content-end">
                             {{-- ROUTE CREATE BUKU --}}
                          <a href="{{ route('buku.create') }}" class="btn btn-sm btn-primary">Tambah Data</a>
+                         @if (auth()->user()->role == 'petugas')
                          <a href="{{ route('export_excel_buku') }}" class="btn btn-sm btn-warning">Export Excel</a>
                          <a href="{{ route('export_pdf_buku') }}" class="btn btn-sm btn-danger">Export Pdf</a>
+                         @elseif(auth()->user()->role == 'administrator')
+                         <a href="{{ route('export_pdf_buku') }}" class="btn btn-sm btn-danger">Export Pdf</a>
                          <a class="modal-effect btn-sm btn btn-dark" data-bs-effect="effect-fall" data-bs-toggle="modal" href="#modaldemo8">Import Excel</a>
+                         @else
+
+                         @endif
 
                         </div>
                     </div>
