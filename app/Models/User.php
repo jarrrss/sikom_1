@@ -38,7 +38,7 @@ class User extends Authenticatable
     // RELASI DARI MODEL USER KE KOLEKSI PRIBADI
     public function koleksipribadi()
     {
-        return $this->hasMany(KolekasiPribadi::class);
+        return $this->hasMany(KoleksiPribadi::class);
     }
     // RELASI DARI MODEL USER KE ULASAN PRIBADI
     public function ulasanbuku()
